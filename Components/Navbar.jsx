@@ -29,15 +29,13 @@ const Navbar = () => {
                         <a href="/" className=" text-white hover:bg-white hover:text-black rounded-lg p-2">
                             EventList
                         </a>
-                        <a href="/" className=" text-white hover:bg-white hover:text-black rounded-lg p-2">
-                            Scanner
-                        </a>
+                        
                         <a href="/" className=" text-white hover:bg-white hover:text-black rounded-lg p-2">
                             AddEvent
                         </a>
-                        {/* <a  className=" text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        <p  className="   block ">
                             <SignInbutton/>
-                        </a> */}
+                        </p>
                     </div>
                 </div>
                 <div className="md:hidden flex item-center">
@@ -91,15 +89,13 @@ const Navbar = () => {
                         <a href="/" className=" text-white block hover:bg-white hover:text-black rounded-lg p-2">
                             EventList
                         </a>
-                        <a href="/" className=" text-white  block hover:bg-white hover:text-black rounded-lg p-2">
-                            Scanner
-                        </a>
+                        
                         <a href="/" className=" text-white block hover:bg-white hover:text-black rounded-lg p-2">
                             AddEvent
                         </a>
-                        {/* <a  className=" text-white  block hover:bg-white hover:text-black rounded-lg p-2">
+                        <p  className="   block ">
                             <SignInbutton/>
-                        </a> */}
+                        </p>
                 </div>
             </div>
 
