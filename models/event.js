@@ -1,7 +1,7 @@
 import { Schema, model, models } from "mongoose";
 
 const eventSchema = new Schema({
-  admin: {
+  creator: {
     type: Schema.Types.ObjectId,
     ref: "Admin",
     required: [true, "Admin is required"],
@@ -11,6 +11,9 @@ const eventSchema = new Schema({
     required: [true, "Email is required"],
     unique: [true, "Email already exists"],
   },
+  collaborators:{
+    type: Array,
+  }
 });
 
 const Event = (models && models.Event) || model("Event", eventSchema);
