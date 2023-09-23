@@ -1,5 +1,5 @@
 import { connectToDB } from "@/lib/mongodb";
-import User from "@/models/user";
+import Admin from "@/models/admin";
 import axios from "axios";
 import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
@@ -13,31 +13,31 @@ const authOptions = {
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log(profile);
-      //   const { name, email } = profile;
-      //   if (account.provider === "google") {
-      //     try {
-      //       await connectToDB();
-      //       //if user already exists
-      //       const userExists = await User.findOne({ email });
-      //       //create new user
-      //       if (!userExists) {
-      //         const res = await axios.post(
-      //           `${process.env.NEXT_PUBLIC_BASE_URL}/api/user`,
-      //           {
-      //             name,
-      //             email,
-      //           }
-      //         );
-      //         if (res.status === 201) {
-      //           return true;
-      //         }
-      //       }
-      //     } catch (error) {
-      //       console.log(error);
-      //       return false;
-      //     }
-      //   }
+      const { name, email, picture } = profile;
+      if (account.provider === "google") {
+        try {
+          await connectToDB();
+          //if user already exists
+          const userExists = await Admin.findOne({ email });
+          //create new user
+          if (!userExists) {
+            const res = await axios.post(
+              `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin`,
+              {
+                name,
+                email,
+                picture,
+              }
+            );
+            if (res.status === 201) {
+              return true;
+            }
+          }
+        } catch (error) {
+          console.log(error);
+          return false;
+        }
+      }
       return user;
     },
   },

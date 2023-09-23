@@ -8,12 +8,12 @@ const eventSchema = new Schema({
   },
   name: {
     type: String,
-    required: [true, "Email is required"],
-    unique: [true, "Email already exists"],
+    required: [true, "Event name is required"],
+    unique: [true, "Event name already exists"],
   },
-  collaborators:{
+  collaborators: {
     type: Array,
-  }
+  },
 });
 
 const Event = (models && models.Event) || model("Event", eventSchema);
