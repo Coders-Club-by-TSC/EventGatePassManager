@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={preahvihear.className}>
         <NextAuthProvider>
           {/* <Navbar /> */}
-          <div>{children}</div>
+          <div className="mt-0">{children}</div>
         </NextAuthProvider>
       </body>
     </html>
