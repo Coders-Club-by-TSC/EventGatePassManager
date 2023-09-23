@@ -1,6 +1,6 @@
 "use client"
 import { useSession, signIn, signOut } from "next-auth/react"
-import { BlackButton } from "./Buttons";
+import {  WhiteButton } from "./Buttons";
 
 const SignInbutton = () => {
     const { status } = useSession();
@@ -14,9 +14,9 @@ const SignInbutton = () => {
         <>
             {
                 status === "authenticated" ? (
-                    <BlackButton onClick={signOutHandler} text="Sign Out" />
+                    <WhiteButton onClick={signOutHandler} text="Sign Out" />
                 ) : (
-                    <BlackButton onClick={signInHandler} text="Sign In" />
+                    <WhiteButton onClick={signInHandler} text="Sign In" />
                 )
             }
         </>
