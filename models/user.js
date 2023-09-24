@@ -4,7 +4,6 @@ const userSchema = new Schema({
   uid: {
     type: String,
     required: [true, "uid is required"],
-    unique: [true, "Email already exists"],
   },
   event: {
     type: Schema.Types.ObjectId,
