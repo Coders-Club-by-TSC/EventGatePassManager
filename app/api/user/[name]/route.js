@@ -49,7 +49,7 @@ export async function POST(req, { params }) {
     const creator = await Admin.findOne({ email });
     if (!creator) {
       return NextResponse.json(
-        { message: "Not a valid creator" },
+        { success: false, message: "Not a valid creator" },
         { status: 400 }
       );
     }
@@ -65,7 +65,9 @@ export async function POST(req, { params }) {
     });
     if (!event) {
       return NextResponse.json(
-        { message: "You are not authorised to work in " + name },
+        {
+          message: "You are not authorised to work in " + name,
+        },
         { status: 404 }
       );
     }
@@ -84,9 +86,9 @@ export async function POST(req, { params }) {
     }
     return NextResponse.json(
       { success: false, message: "User Already Exists" },
-      { status: 404 }
+      { status: 200 }
     );
   } catch (err) {
-    return NextResponse.json({ message: err }, { status: 500 });
+    return NextResponse.json({ success: false, message: err }, { status: 500 });
   }
 }
