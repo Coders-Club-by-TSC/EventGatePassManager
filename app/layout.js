@@ -1,4 +1,4 @@
-// import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Preahvihear } from "next/font/google";
 import { NextAuthProvider } from "./Providers";
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={preahvihear.className}>
         <NextAuthProvider>
-          {/* <Navbar /> */}
+          <Navbar />
           <div className="mt-0">{children}</div>
         </NextAuthProvider>
       </body>
