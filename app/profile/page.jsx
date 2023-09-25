@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "../profile/profile.scss";
 import Navbar from "@/Components/Navbar";
-import { Button } from "@nextui-org/react";
+// import { Button } from "@nextui-org/react";
 const ProfilePage = () => {
   const [isActive, setIsActive] = useState(false);
 
