@@ -8,6 +8,6 @@ export const config = {
     "/api/user/(.*)",
     "/create",
     "/profile",
-    "/(.*)",
+    "/(.+)",
   ],
 };
