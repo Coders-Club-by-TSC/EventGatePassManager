@@ -1,9 +1,7 @@
 "use client"
 import React from 'react'
-import SignInbutton from './SignInButton';
+import SignInButton from './SignInButton';
 import { useState } from 'react';
-import Image from 'next/image';
-import HeroImage from "@/public/Images/Hero.gif"
 
 const Navbar = () => {
     const [isclick, setisclick] = useState(false);
@@ -33,7 +31,7 @@ const Navbar = () => {
                                     Create
                                 </a>
                                 <p >
-                                    <SignInbutton />
+                                    <SignInButton />
                                 </p>
                             </div>
                         </div>
@@ -91,7 +89,7 @@ const Navbar = () => {
                                 Create
                             </a>
                             <p className="   block ">
-                                <SignInbutton />
+                                <SignInButton />
                             </p>
                         </div>
                     </div>
@@ -101,9 +99,9 @@ const Navbar = () => {
 
             </nav>
 
-          
 
- 
+
+
 
 
         </>
