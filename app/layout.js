@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/Components/Navbar";
 import "./globals.css";
 import { Preahvihear } from "next/font/google";
 import { NextAuthProvider } from "./Providers";
