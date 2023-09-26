@@ -2,7 +2,7 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import { WhiteButton } from "./Buttons";
 
-const SignInButton = () => {
+function SignInButton() {
     const { status } = useSession();
     const signInHandler = () => {
         signIn("google", { callbackUrl: "/" })

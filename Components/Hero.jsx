@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import SignInButton from "./SignInButton";
 import HeroImage from "@/public/Images/Hero.gif";
 
 function Hero() {
@@ -30,9 +29,6 @@ function Hero() {
                 </button>
               </a>
 
-              <p className=" ml-3  inline-flex ">
-                <SignInButton />
-              </p>
             </div>
           </div>
           <div className=" ">

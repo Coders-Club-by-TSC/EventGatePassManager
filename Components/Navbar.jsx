@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import SignInButton from './SignInButton';
+import SignInButton from './SignIn';
 import { useState } from 'react';
 
 const Navbar = () => {
