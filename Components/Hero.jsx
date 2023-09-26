@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SignInbutton from "./SignInButton";
+import SignInButton from "./SignInButton";
 import HeroImage from "@/public/Images/Hero.gif";
 
 function Hero() {
@@ -31,9 +31,7 @@ function Hero() {
               </a>
 
               <p className=" ml-3  inline-flex ">
-                <SignInbutton />
-                {/* <button  className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"> <SignInbutton /> </button>
-        </a> */}
+                <SignInButton />
               </p>
             </div>
           </div>
