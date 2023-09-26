@@ -89,15 +89,18 @@ const Scanner = ({ params }) => {
                                         </div>
                                     </div>
                                 </div>
-                            </div> : <div><div className="w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                                <div className="relative w-full max-w-md max-h-full">
-                                    <div className="relative bg-red-700 rounded-lg shadow dark:bg-red-700">
-                                        <div className="p-6 text-center">
-                                            <h3 className="text-xl font-normal text-gray-100 dark:text-gray-100">{message}</h3>
+                            </div> :
+                            <div>
+                                <div className="w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                    <div className="relative w-full max-w-md max-h-full">
+                                        <div className="relative bg-red-700 rounded-lg shadow dark:bg-red-700">
+                                            <div className="p-6 text-center">
+                                                <h3 className="text-xl font-normal text-gray-100 dark:text-gray-100">{message}</h3>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div></div>
+                            </div>
                     :
                     <div id="reader" className="md:w-1/2 w-[calc(100%-2rem)]"></div>
                 }

@@ -99,6 +99,9 @@ export async function PUT(req, { params }) {
         { status: 404 }
       );
     }
+    for (var i = 0; i < event.collaborators.length; i++) {
+      collaborators.push(event.collaborators[i]);
+    }
     const editedEvent = await Event.findByIdAndUpdate(
       event._id,
       {
