@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import HeroGif from "@/public/Images/Utkarsh.jpeg";
 import { useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";

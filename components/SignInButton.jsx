@@ -1,8 +1,8 @@
 "use client"
 import { useSession, signIn, signOut } from "next-auth/react"
-import {  WhiteButton } from "./Buttons";
+import { WhiteButton } from "./Buttons";
 
-const SignInbutton = () => {
+const SignInButton = () => {
     const { status } = useSession();
     const signInHandler = () => {
         signIn("google", { callbackUrl: "/" })
@@ -23,4 +23,4 @@ const SignInbutton = () => {
     )
 }
 
-export default SignInbutton
+export default SignInButton
