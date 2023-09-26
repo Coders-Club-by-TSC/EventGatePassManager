@@ -19,7 +19,7 @@ const ProfilePage = () => {
     const { data } = await axios.get(`/api/admin`);
     setUserData(data?.data);
   };
-  console.log(userData);
+  // console.log(userData);
   useEffect(() => {
     getUserData();
   });

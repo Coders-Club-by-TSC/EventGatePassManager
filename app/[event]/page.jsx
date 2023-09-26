@@ -14,7 +14,7 @@ function Event({ params }) {
     // }
     // setVal(data?.data?.collaborators);
   };
-  console.log(eventData);
+  // console.log(eventData);
   useEffect(() => {
     getEventData();
   });
@@ -52,7 +52,7 @@ function Event({ params }) {
             <button
               type="button"
               className="mt-3 text-3xl text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-800 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
-            // onClick={() => handleAdd()}
+              // onClick={() => handleAdd()}
             >
               <div className="flex gap-2 items-center justify-center">
                 <svg
