@@ -81,14 +81,16 @@ const ProfilePage = () => {
                   {userData?.email}
                 </h3>
               </div>
-              <div className="text-center mb-10">
-                <button
-                  type="button"
-                  class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-4 text-center mr-2 mb-2"
-                >
-                  Add Event
-                </button>
-              </div>
+              <Link href="/create">
+                <div className="text-center mb-10">
+                  <button
+                    type="button"
+                    class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-800  font-medium rounded-lg text-sm px-5 py-4 text-center mr-2 mb-2"
+                  >
+                    Add Event
+                  </button>
+                </div>
+              </Link>
               {/* <div className="mt-10 py-10 border-t border-blueGray-200 text-center"></div> */}
             </div>
           </div>
@@ -118,7 +120,7 @@ const ProfilePage = () => {
                 {data?.creator?.name}
               </p>
 
-              <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
+              <p className="mb-3 font-normal text-gray-400 ">
                 {data?.collaborators?.map((collaborator) => {
                   return <h4 key={collaborator}>{collaborator}</h4>;
                 })}
