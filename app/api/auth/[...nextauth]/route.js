@@ -21,14 +21,11 @@ const authOptions = {
           const userExists = await Admin.findOne({ email });
           //create new user
           if (!userExists) {
-            const res = await axios.post(
-              `${process.env.NEXT_PUBLIC_BASE_URL}/api/admin`,
-              {
-                name,
-                email,
-                picture,
-              }
-            );
+            const res = await axios.post(`/api/admin`, {
+              name,
+              email,
+              picture,
+            });
             if (res.status === 201) {
               return true;
             }
