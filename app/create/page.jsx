@@ -26,7 +26,7 @@ const CreatePage = () => {
   const handleSubmit = async () => {
     if (!eventName)
       return;
-    try { await axios.post(`/api/event/`, { name: eventName, collaborators: val }); router.push("/" + eventName); } catch (err) { alert(err.message); }
+    try { await axios.post(`/api/event/`, { name: eventName, collaborators: val }); router.push("/" + eventName); } catch (err) { alert(err.response.data.message) }
 
   }
   return (
